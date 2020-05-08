@@ -59,7 +59,6 @@ class ServiceProvider extends LaravelServiceProvider
     protected function registerPublishes()
     {
         if ($this->app->runningInConsole()) {
-            $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
             $this->publishes([
                 __DIR__ . '/../../config/quickbooks.php' => config_path('quickbooks.php'),
